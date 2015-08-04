@@ -1,0 +1,11 @@
+(defun showdots (lst)
+  (if (null lst)
+    (format t "~A" "NIL")
+    (if (consp lst)
+      (progn
+        (format t "~A" "(")
+        (showdots (car lst))
+        (format t " ~A " ".")
+        (showdots (cdr lst))
+        (format t "~A" ")"))
+      (format t "~A" lst))))
