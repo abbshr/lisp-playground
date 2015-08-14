@@ -1,0 +1,10 @@
+(defun num-dec (num-lst)
+  (if (< (length num-lst) 2)
+    t
+    (let ((fst (car num-lst)) (sec (nth 1 num-lst)))
+      (and (= 1 (dec fst sec))
+        (num-dec (cdr num-lst))))))
+(defun dec (a b)
+  (if (> a b)
+    (- a b)
+    (- b a)))
